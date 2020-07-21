@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>fruits#show page</h1>
+    <!-- <%= %> : used to print out data that we want a user to see -->
+    <p>
+        The <%= fruit.name %>
+        <!-- <% %> : used to run js code that we don't want to print out -->
+        <% if (fruit.readyToEat === true) { %>
+            is ready to eat.
+        <% } else { %>
+            is not ready to eat.
+        <% } %>
+    </p>
+</body>
+</html>

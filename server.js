@@ -13,7 +13,13 @@ app.get('/fruits/', (request, response) => {
 
 // SHOW ROUTE - send a single fruit in the response
 app.get('/fruits/:index', (request, response) => {
-    response.send(fruits[request.params.index])
+    // render the show.ejs file in the response
+    response.render('show.ejs', {
+        // we can provide data as a key value pair to be sent to the view
+        fruit: fruits[request.params.index]
+    })
+    // NOTE: the render function will automatically look 
+    //       for files by the name we provide in the 'views folder
 })
 
 // listening
