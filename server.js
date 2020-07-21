@@ -3,23 +3,7 @@ const express = require('express')
 const app = express()
 
 // data
-const fruits = [
-    {
-        name:'apple',
-        color: 'red',
-        readyToEat: true
-    },
-    {
-        name:'pear',
-        color: 'green',
-        readyToEat: false
-    },
-    {
-        name:'banana',
-        color: 'yellow',
-        readyToEat: true
-    }
-]
+const fruits = require('./models/fruits.js')
 
 // routes
 // INDEX ROUTE - send all fruits in the response
